@@ -1,0 +1,9 @@
+#find subarray whose sum is divisible by K
+#brute force
+# time complexity O(n2)
+a=[1,2,3,4,5]
+for i in range(len(a)):
+    for j in range(i+1,len(a)+1):
+        my_sum=sum(a[i:j])
+        if my_sum%5 == 0:
+            print(a[i:j])
