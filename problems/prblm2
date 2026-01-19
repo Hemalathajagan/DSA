@@ -1,0 +1,12 @@
+#subarray whos sum equals to k
+#bruteforce approach
+#time complexity O(n2)
+arr=[1,2,3,4]
+k=4
+count = 0
+for i in range(len(arr)):
+    for j in range(i+1,len(arr)+1):
+        print(arr[i:j])
+        if(sum(arr[i:j])) == k:
+            count += 1
+print(count)
