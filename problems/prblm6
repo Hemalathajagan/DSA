@@ -1,0 +1,9 @@
+#find the missing element
+arr=[1,2,4]
+sum=0
+for i in arr:
+    sum=sum+i
+last=arr[-1]
+sum1=last*(last+1)/2
+missing = sum1-sum
+print(int(missing))
