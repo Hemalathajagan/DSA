@@ -1,0 +1,17 @@
+#subarray whos sum equals to k
+#optimal approach
+def count_subarrays_with_sum_k(arr, k):
+    prefix_sum = 0                  # Stores cumulative sum
+    count = 0                       # Final answer
+    prefix_map = {0: 1}             # Hash map to store prefix sums
+
+    for num in arr:
+        prefix_sum += num           # Step 1: update prefix sum
+
+        if prefix_sum - k in prefix_map:   # Step 2: check condition
+            count += prefix_map[prefix_sum - k]
+
+        prefix_map[prefix_sum] = prefix_map.get(prefix_sum, 0) + 1
+                                          # Step 3: update map
+
+    return count
