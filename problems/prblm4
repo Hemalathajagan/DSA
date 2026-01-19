@@ -1,0 +1,5 @@
+#find min and max in array 
+a=[891,2,89,4,90]
+a.sort()
+print(a[0])
+print(a[-1])
