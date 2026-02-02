@@ -1,0 +1,18 @@
+#Given two numbers a and b, find kth digit from right of a pow(b).
+
+a=int(input())
+b=int(input())
+c=int(input())
+res=1
+count=0
+#to find the power
+for i in range(b):
+    res=res*a
+    
+#to find the kth digit from right of a pow(b)
+while(res>0):
+    ld=res%10
+    count+=1
+    if(count==c):
+        print(ld)
+    res=res//10
