@@ -1,0 +1,17 @@
+# trailing zeros(zeros from right end) in factoral of a number 
+n=12
+fact=1
+count=0
+for i in range(1,n+1):
+    fact=fact*i
+print("fact is")
+print(fact)
+while(fact>0):
+    ls=fact%10
+    fact=fact//10
+    if(ls==0):
+        count+=1
+    else:
+        break
+print("count is ")
+print(count)
