@@ -1,0 +1,12 @@
+# optimized solution fto find if a no is prime or not  
+import math
+n = 7
+sq = math.sqrt(n)
+is_prime = True
+for i in range(2,int(sq)):
+    if(n%i == 0 ):
+        is_prime = False
+if is_prime:
+    print("prime")
+else:
+    print("not prime")
