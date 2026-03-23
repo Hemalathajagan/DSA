@@ -1,0 +1,19 @@
+# You are given two integer numbers in the form of string, the base a and the index b. You have to find the last digit of ab.
+
+
+# INSTEAD OF DIRECT A MOD B 
+
+
+a="2"
+b = "24"
+res = 0
+if b == "0" :
+    print(1)
+else:
+    base = int(a[-1])
+    mod = int(b) % 4
+    if mod == 0:
+        res = base ** 4
+    else:
+        res = base ** mod
+print(res % 10)
