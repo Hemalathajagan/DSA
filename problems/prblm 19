@@ -1,0 +1,15 @@
+# find if a nummber is perfect (sum of its divisors (excluding the number itself) is equal to the number )
+
+import math 
+n = 28
+sum =1
+for i in range(2,int(math.sqrt(n)+1)):
+    if(n % i == 0):
+        sum = sum + i
+        if(n/i != i):
+            sum = sum + (n/i)
+if(sum == n):
+    print("perfect number")
+else:
+    print("not a perfect number ")
+            
